@@ -1,0 +1,85 @@
+/*
+Theme Name: Olatech Agency
+Theme URI: https://olatech.agency
+Author: Olatech Agency
+Author URI: https://olatech.agency
+Description: Custom theme for Olatech Agency. Sticky branded header, full-width page templates built for the Olatech page designs, and a branded footer. Activating it assigns the Primary Menu and the Home page automatically.
+Version: 1.0.0
+Requires at least: 5.8
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+Text Domain: olatech-agency
+*/
+:root{--navy:#071B2C;--navy2:#0d2a43;--green:#0B7A3B;--lime:#B7FF00;--ink:#0b1b2a;--mut:#51657a;--mist:#f2f7f4;--line:#e1ebe5}
+*,*:before,*:after{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;height:auto}
+a{color:var(--green)}
+.screen-reader-text{position:absolute!important;clip:rect(1px,1px,1px,1px);width:1px;height:1px;overflow:hidden}
+.screen-reader-text:focus{clip:auto;width:auto;height:auto;background:#fff;color:var(--navy);padding:12px 18px;z-index:100000;left:8px;top:8px;border-radius:8px}
+/* header */
+.ot-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.94);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .25s}
+.ot-header.scrolled{box-shadow:0 12px 34px -22px rgba(7,27,44,.45)}
+body.admin-bar .ot-header{top:32px}
+@media(max-width:782px){body.admin-bar .ot-header{top:46px}}
+.ot-bar{max-width:1240px;margin:0 auto;padding:0 28px;height:82px;display:flex;align-items:center;gap:28px}
+.ot-logo{display:flex;align-items:center;flex:none}
+.ot-logo img{height:52px;width:auto;display:block}
+.ot-nav{flex:1;display:flex;justify-content:center}
+.ot-menu{list-style:none;margin:0;padding:0;display:flex;gap:4px;align-items:center}
+.ot-menu li{margin:0;position:relative}
+.ot-menu a{display:block;padding:10px 15px;border-radius:999px;font:600 15px/1 Inter,sans-serif;color:var(--navy);text-decoration:none;transition:all .2s}
+.ot-menu a:hover{background:var(--mist);color:var(--green)}
+.ot-menu .current-menu-item>a,.ot-menu .current_page_item>a,.ot-menu .current-menu-ancestor>a{color:var(--green);background:#e6f5ec}
+.ot-menu .sub-menu{display:none;position:absolute;left:0;top:100%;min-width:220px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:8px;list-style:none;margin:6px 0 0;box-shadow:0 24px 50px -24px rgba(7,27,44,.45)}
+.ot-menu li:hover>.sub-menu,.ot-menu li:focus-within>.sub-menu{display:block}
+.ot-cta{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff!important;text-decoration:none;padding:13px 22px;border-radius:999px;font:600 15px/1 Inter,sans-serif;transition:all .25s;flex:none}
+.ot-cta:hover{background:var(--navy);transform:translateY(-1px)}
+.ot-cta-m{display:none}
+.ot-burger{display:none;margin-left:auto;width:46px;height:46px;border:1px solid var(--line);background:#fff;border-radius:12px;cursor:pointer;position:relative}
+.ot-burger span,.ot-burger span:before,.ot-burger span:after{content:"";position:absolute;left:12px;right:12px;height:2px;background:var(--navy);border-radius:2px;transition:all .25s}
+.ot-burger span{top:22px}.ot-burger span:before{left:0;right:0;top:-7px}.ot-burger span:after{left:0;right:0;top:7px}
+.ot-burger[aria-expanded=true] span{background:transparent}
+.ot-burger[aria-expanded=true] span:before{top:0;transform:rotate(45deg)}
+.ot-burger[aria-expanded=true] span:after{top:0;transform:rotate(-45deg)}
+@media(max-width:1020px){
+.ot-bar{height:72px}.ot-logo img{height:44px}
+.ot-burger{display:block}.ot-bar>.ot-cta{display:none}
+.ot-nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);padding:14px 20px 24px;flex-direction:column;box-shadow:0 30px 50px -30px rgba(7,27,44,.5)}
+.ot-nav.open{display:flex}
+.ot-menu{flex-direction:column;align-items:stretch;gap:2px}
+.ot-menu a{padding:15px 16px;border-radius:12px;font-size:16px}
+.ot-menu .sub-menu{display:block;position:static;border:0;box-shadow:none;padding:0 0 0 14px;margin:0}
+.ot-cta-m{display:inline-flex;justify-content:center;margin-top:14px}
+}
+/* main */
+.ot-main .ola{width:100%!important;max-width:100%!important;margin:0!important}
+.ot-page{max-width:820px;margin:0 auto;padding:72px 28px 96px}
+.ot-page h1{font:700 clamp(32px,4.5vw,48px)/1.12 Sora,Inter,sans-serif;letter-spacing:-.02em;color:var(--navy);margin:0 0 28px}
+.ot-entry h2,.ot-entry h3{font-family:Sora,Inter,sans-serif;color:var(--navy);letter-spacing:-.01em}
+.ot-entry p,.ot-entry li{color:#33475a}
+.ot-posts{max-width:1200px;margin:0 auto;padding:72px 28px 96px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ot-post{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;transition:all .3s}
+.ot-post:hover{transform:translateY(-5px);box-shadow:0 26px 54px -28px rgba(7,27,44,.4)}
+.ot-post h2{font:700 22px/1.2 Sora,sans-serif;margin:0 0 10px}.ot-post h2 a{color:var(--navy);text-decoration:none}
+.ot-post p{color:var(--mut);margin:0}
+.ot-nf{text-align:center;padding:120px 28px}.ot-nf h1{font:800 clamp(72px,14vw,140px)/1 Sora,sans-serif;color:var(--green);margin:0}
+.ot-nf p{color:var(--mut);margin:12px 0 28px}
+@media(max-width:900px){.ot-posts{grid-template-columns:1fr}}
+/* footer */
+.ot-footer{background:var(--navy);color:#b9c9d8;position:relative;overflow:hidden;padding:76px 0 28px}
+.ot-footer:before{content:"";position:absolute;inset:0;background:radial-gradient(45% 60% at 100% 0,rgba(183,255,0,.12),transparent 62%),radial-gradient(40% 55% at 0 100%,rgba(11,122,59,.5),transparent 62%)}
+.ot-fwrap{position:relative;max-width:1240px;margin:0 auto;padding:0 28px}
+.ot-fgrid{display:grid;grid-template-columns:1.5fr .8fr .8fr 1.1fr;gap:48px}
+.ot-flogo{display:inline-block;background:#fff;border-radius:16px;padding:10px 18px;margin-bottom:22px}
+.ot-flogo img{height:44px;width:auto;display:block}
+.ot-footer p{margin:0;color:#b9c9d8;font-size:16px;max-width:360px}
+.ot-footer h4{font:700 13px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin:0 0 20px}
+.ot-footer ul{list-style:none;margin:0;padding:0}.ot-footer li{margin:0 0 12px}
+.ot-footer a{color:#dbe7f1;text-decoration:none;transition:color .2s}.ot-footer a:hover{color:var(--lime)}
+.ot-fcta{display:inline-flex;margin-top:24px;background:var(--lime);color:var(--navy)!important;padding:13px 22px;border-radius:999px;font:600 15px/1 Inter,sans-serif;transition:all .25s}
+.ot-fcta:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(183,255,0,.55)}
+.ot-fbottom{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:#8fa6ba}
+@media(max-width:900px){.ot-fgrid{grid-template-columns:1fr 1fr}.ot-fgrid>div:first-child{grid-column:1/-1}}
+@media(max-width:560px){.ot-fgrid{grid-template-columns:1fr}.ot-bar{padding:0 18px}}

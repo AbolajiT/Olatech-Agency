@@ -1,0 +1,9 @@
+{
+  "name": "olatech-agency",
+  "version": "1.0.0",
+  "description": "Olatech Agency — GoHighLevel engineering, AI voice agents, and custom automation",
+  "scripts": {
+    "dev": "npx serve public",
+    "build": "echo 'Static site — no build step needed'"
+  }
+}
