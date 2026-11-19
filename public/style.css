@@ -83,3 +83,9 @@ body.admin-bar .ot-header{top:32px}
 .ot-fbottom{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:#8fa6ba}
 @media(max-width:900px){.ot-fgrid{grid-template-columns:1fr 1fr}.ot-fgrid>div:first-child{grid-column:1/-1}}
 @media(max-width:560px){.ot-fgrid{grid-template-columns:1fr}.ot-bar{padding:0 18px}}
+/* social */
+.ot-social{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+.ot-social a{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);transition:all .25s}
+.ot-social a:hover{background:rgba(183,255,0,.15);border-color:var(--lime);transform:translateY(-2px)}
+.ot-social svg{width:20px;height:20px;fill:#dbe7f1;transition:fill .25s}
+.ot-social a:hover svg{fill:var(--lime)}
