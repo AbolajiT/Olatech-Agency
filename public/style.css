@@ -89,3 +89,28 @@ body.admin-bar .ot-header{top:32px}
 .ot-social a:hover{background:rgba(183,255,0,.15);border-color:var(--lime);transform:translateY(-2px)}
 .ot-social svg{width:20px;height:20px;fill:#dbe7f1;transition:fill .25s}
 .ot-social a:hover svg{fill:var(--lime)}
+
+/* Founder portrait block (About hero + home "Meet the founder") */
+.o-avail{display:inline-flex;align-items:center;gap:10px;padding:5px 16px 5px 5px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);font:500 14px/1 Inter,sans-serif;color:#e6eef5;margin-bottom:24px}
+.o-avail img{width:30px;height:30px;border-radius:50%;object-fit:cover;display:block}
+.o-avail i{width:8px;height:8px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.22);flex:none}
+.o-avail.l{background:#fff;border-color:#e1ebe5;color:#0b1b2a;box-shadow:0 8px 24px -16px rgba(7,27,44,.4)}
+.o-arch{position:relative;max-width:420px;width:100%;margin:0 auto}
+.o-arch .fr{padding:12px;border-radius:50% 50% 30px 30px/40% 40% 30px 30px;background:linear-gradient(160deg,#B7FF00 0%,#5fe08a 45%,#0B7A3B 100%);box-shadow:0 50px 100px -40px rgba(0,0,0,.7)}
+.o-arch .ph{border-radius:50% 50% 20px 20px/40% 40% 20px 20px;overflow:hidden;aspect-ratio:4/5;background:#0d2a43}
+.o-arch .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
+.o-promise{position:absolute;left:-52px;top:34%;background:#fff;border-radius:18px;padding:16px 20px;box-shadow:0 26px 50px -18px rgba(0,0,0,.5);max-width:220px;z-index:2}
+.o-promise small{display:block;font:600 11px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#51657a;margin-bottom:8px}
+.o-promise p{font:italic 400 21px/1.22 Georgia,'Times New Roman',serif;color:#071B2C;margin:0}
+.o-badge{position:absolute;right:-30px;bottom:6%;display:flex;align-items:center;gap:11px;background:#fff;border-radius:16px;padding:10px 16px 10px 10px;box-shadow:0 26px 50px -18px rgba(0,0,0,.5);font:600 14px/1.25 Inter,sans-serif;color:#071B2C;z-index:2}
+.o-badge .ic{width:36px;height:36px;border-radius:11px;background:#0B7A3B;display:grid;place-items:center;flex:none}
+.o-badge .ic svg{width:19px;height:19px;fill:none;stroke:#B7FF00;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.o-badge small{display:block;font:500 12px/1.2 Inter,sans-serif;color:#51657a}
+.o-ticks{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:30px;font:500 15px/1.3 Inter,sans-serif;color:#c9d8e4}
+.o-ticks span{display:inline-flex;align-items:center;gap:9px}
+.o-ticks svg{width:18px;height:18px;fill:none;stroke:#B7FF00;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.o-meet .o-ticks{color:#51657a}.o-meet .o-ticks svg{stroke:#0B7A3B}
+.o-meet .o-split{align-items:center;gap:72px}
+.o-meet .o-arch{max-width:380px}
+.o-hero h1 em.s{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;padding-right:.06em}
+@media(max-width:980px){.o-promise{left:-6px;top:auto;bottom:24%;padding:12px 16px;max-width:180px}.o-promise p{font-size:17px}.o-badge{right:-6px;bottom:-14px}.o-arch{max-width:360px;margin-top:20px}.o-meet .o-split{gap:40px}}
